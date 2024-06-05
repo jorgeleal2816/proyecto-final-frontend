@@ -1,1 +1,17 @@
-<p>home works!</p>
+<!-- <p>{{ products | json  }}</p> -->
+
+<div class="products">
+  <ul>
+    <li *ngFor="let product of products">
+      <div class="card" style="width: 18rem;">
+        <img [src]="product.urlImage" class="card-img-top" [alt]="product.name">
+        <div class="card-body">
+          <h5 class="card-title">{{ product.name }}</h5>
+          <p class="card-text">{{ product.category }}</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+    </li>
+  </ul>
+
+</div>
