@@ -12,6 +12,11 @@ import { HeaderComponent } from './components/layout/header/header.component';
 import { FooterComponent } from './components/layout/footer/footer.component';
 import { AsideComponent } from './components/layout/aside/aside.component';
 import { Page404Component } from './public/pages/page-404/page-404.component';
+import { LocalidadesComponent } from './private/pages/localidades/localidades.component';
+import { BuscarComponent } from './public/pages/buscar/buscar.component';
+import { provideHttpClient } from '@angular/common/http';
+import { NuevaLocalidadComponent } from './private/pages/localidades/nueva-localidad/nueva-localidad.component';
+import { ActualizarLocalidadComponent } from './private/pages/localidades/actualizar-localidad/actualizar-localidad.component';
 
 @NgModule({
   declarations: [
@@ -24,13 +29,17 @@ import { Page404Component } from './public/pages/page-404/page-404.component';
     HeaderComponent,
     FooterComponent,
     AsideComponent,
-    Page404Component
+    Page404Component,
+    LocalidadesComponent,
+    BuscarComponent,
+    NuevaLocalidadComponent,
+    ActualizarLocalidadComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [provideHttpClient()],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
