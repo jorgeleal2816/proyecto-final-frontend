@@ -18,7 +18,7 @@ const routes: Routes = [
   { path: 'dashboard/products', component: ProductsComponent },   // http://localhost:4200/dashboard/products
   { path: 'dashboard/localidades', component: LocalidadesComponent },
   { path: 'dashboard/nueva-localidad', component: NuevaLocalidadComponent },
- { path: 'dashboard/actualizar-localidad', component: ActualizarLocalidadComponent },
+ { path: 'dashboard/actualizar-localidad/:id', component: ActualizarLocalidadComponent },
   { path: '404', component: Page404Component },                   // http://localhost:4200/404
   { path: '**', redirectTo: '404' },
 ];
