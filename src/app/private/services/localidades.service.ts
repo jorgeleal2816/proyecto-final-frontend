@@ -10,6 +10,6 @@ export class LocalidadesService {
 
   getProducts() {
 
-    return this.http.get<any>("http://localhost:3000/api/localidades");
+    return this.http.get<any>("http://localhost:3001/api/localidades");
   }
 }
