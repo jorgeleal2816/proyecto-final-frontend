@@ -12,16 +12,17 @@ export class HomeComponent implements OnInit {
   products: any[] = [];
 
   /** Inyectar una dependencia (hacerla disponible) usando el constructor de la clase del componente */
-  constructor( private productService: ProductsService ) {}
+  constructor( private productservice: ProductsService ) {}
 
 
   ngOnInit() {
     /** Ejecuta el servicio disponible para obtener los datos */
-    this.products = this.productService.getProducts();
-  }
+    
+    }
+  
 
   ngOnDestroy() {
 
   }
-
+  
 }

@@ -4,9 +4,7 @@ import { Injectable } from "@angular/core";
 @Injectable ({
   providedIn: 'root'
 })
-export class ProductsService {
-
-
+export class NewProductServices {
 
   constructor(private httpClient:HttpClient) {}
 
@@ -14,6 +12,11 @@ export class ProductsService {
    return this.httpClient.get<any>("http://localhost:3007/api/productos")
   
   }
+
+  createProduct(product: any) {
+    return this.httpClient.post<any>("http://localhost:3007/api/productos", product)
+   
+   }
 
 
   }
