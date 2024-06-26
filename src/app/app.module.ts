@@ -12,6 +12,11 @@ import { HeaderComponent } from './components/layout/header/header.component';
 import { FooterComponent } from './components/layout/footer/footer.component';
 import { AsideComponent } from './components/layout/aside/aside.component';
 import { Page404Component } from './public/pages/page-404/page-404.component';
+import { EventosComponent } from './private/pages/eventos/eventos.component';
+import { NeweventsComponent } from './private/pages/eventos/newevents/newevents.component';
+import { provideHttpClient } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
+import { ActualizareventoComponent } from './private/pages/actualizarevento/actualizarevento.component';
 
 @NgModule({
   declarations: [
@@ -24,13 +29,17 @@ import { Page404Component } from './public/pages/page-404/page-404.component';
     HeaderComponent,
     FooterComponent,
     AsideComponent,
-    Page404Component
+    Page404Component,
+    EventosComponent,
+    NeweventsComponent,
+    ActualizareventoComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers: [ provideHttpClient()],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

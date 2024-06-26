@@ -1,14 +1,16 @@
-<!-- <p>{{ products | json  }}</p> -->
 
-<div class="products">
+<div class="eventos">
   <ul>
-    <li *ngFor="let product of products">
+    <li *ngFor="let eventos of eventos">
       <div class="card" style="width: 18rem;">
-        <img [src]="product.urlImage" class="card-img-top" [alt]="product.name">
+        <img [src]="eventos.urlImage" class="card-img-top" [alt]="eventos.name">
         <div class="card-body">
-          <h5 class="card-title">{{ product.name }}</h5>
-          <p class="card-text">{{ product.category }}</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
+          <h5 class="card-title">{{ eventos.name }}</h5>
+          <p class="card-text">{{ eventos.Descripcion }}</p>
+          <p class="card-number">Precio:  {{ eventos.price | currency}}</p>
+          <p class="card-date">Fecha inicial:  {{ eventos.fecha_inicial }}</p>
+          <p class="card-date">Fecha final:  {{ eventos.fecha_final }}</p>
+          <a href="#" class="btn btn-primary">Inscribirse</a>
         </div>
       </div>
     </li>

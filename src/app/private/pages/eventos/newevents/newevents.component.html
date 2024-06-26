@@ -1,0 +1,62 @@
+<div class="container">
+  <div class="newevent">
+    <form 
+    class="row g-3 needs-validation" novalidate
+    [formGroup]="neweventos"
+    (ngSubmit)="onSumbit()"
+  >
+      <div class="col-md-4">
+        <label for="validationCustom01" class="form-label">Nombre del evento</label>
+        <input type="text" class="form-control" id="validationCustom01" placeholder="Ingresa el nombre" formControlName="name" required>
+        <div class="valid-feedback">
+          ¡Perfecto!
+        </div>
+      </div>
+      <div class="col-md-4">
+        <label for="validationCustom02" class="form-label">Descripción del evento</label>
+        <input type="text" class="form-control" id="validationCustom02" placeholder="Ingresa la descripción" formControlName="description" required>
+        <div class="valid-feedback">
+          ¡Perfecto!
+        </div>
+      </div>
+      <div class="col-md-4">
+        <label for="validationCustom03" class="form-label">Precio</label>
+        <div class="input-group">
+          <span class="input-group-text">$</span>
+          <input type="number" class="form-control" placeholder="Ingresa el precio" formControlName="price" required>
+          <div class="valid-feedback">
+            ¡Perfecto!
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <label for="validationCustom04" class="form-label">Fecha inicial del evento</label>
+        <input type="date" class="form-control" id="validationCustom04" formControlName="initialDate" required>
+        <div class="invalid-feedback">
+          Por favor, ingresa una fecha válida.
+        </div>
+      </div>
+      <div class="col-md-6">
+        <label for="validationCustom05" class="form-label">Fecha final del evento</label>
+        <input type="date" class="form-control" id="validationCustom05" formControlName="finalDate" required>
+        <div class="invalid-feedback">
+          Por favor, ingresa una fecha válida.
+        </div>
+      </div>
+      <div class="col-12">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+          <label class="form-check-label" for="invalidCheck">
+            Acepto los términos y condiciones.
+          </label>
+          <div class="invalid-feedback">
+            Debes aceptar los términos y condiciones.
+          </div>
+        </div>
+      </div>
+      <div class="col-12">
+        <button class="btn btn-primary" type="submit">Agregar Evento</button>
+      </div>
+    </form>
+  </div>
+</div>
