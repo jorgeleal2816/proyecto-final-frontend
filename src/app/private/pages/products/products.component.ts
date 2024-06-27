@@ -13,10 +13,21 @@ export class ProductsComponent {
   constructor(private productsService: ProductsService ) { }
 
   ngOnInit(){
+    this.loadData()
+  }
+
+  loadData() {
     this.productsService.getProduct().subscribe(data=> {
       console.log(data)
       this.products = data.data
     })
+  }
+
+  onDelete(id: any) {
+    this.productsService.DeleteProductById(id).subscribe( data => {
+      console.log(data);
+      this.loadData();
+    });
   }
 
 }

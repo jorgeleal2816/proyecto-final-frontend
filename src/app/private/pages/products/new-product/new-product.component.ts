@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
-import {NewProductServices } from '../../../services/newproducts.service';
+import { ProductsService } from '../../../services/products.service';
 
 @Component({
   selector: 'app-new-product',
@@ -9,18 +9,18 @@ import {NewProductServices } from '../../../services/newproducts.service';
 })
 export class NewProductComponent {
 
-  newProduct:any
+  newProduct: FormGroup
 
   constructor(
     private formBuilder: FormBuilder,
-    private newproductServices: NewProductServices ){
-      this.newProduct = new FormGroup({
-        name: new FormControl( '', [] ),
-        description: new FormControl( '', [] ),
-        price: new FormControl( 0, [] ),
-        urlimagen: new FormControl( '', []),
-        quantity: new FormControl( 0, [] ),
-        
+    private productService: ProductsService){
+      
+      this.newProduct = this.formBuilder.group({
+        name: ['', [Validators.required]],
+        description: ['', []],
+        price: ['', []],
+        urlImagen: ['', []],
+        quantity: ['', []]
       })
     }
 
@@ -32,7 +32,7 @@ export class NewProductComponent {
   onSumbit() {
     if( this.newProduct.valid ) {
       console.log( this.newProduct.value );
-      this.newproductServices.createProduct(this.newProduct.value).subscribe((data) => {
+      this.productService.createProduct(this.newProduct.value).subscribe((data) => {
         console.log(data)
       })
 

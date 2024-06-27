@@ -1,1 +1,96 @@
 /* You can add global styles to this file, and also import other style files */
+/* Estilos generales */
+body {
+    background-color: #333; /* Fondo oscuro */
+    font-family: Arial, sans-serif;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #444; /* Fondo gris oscuro */
+    border: 1px solid #666; /* Borde gris claro */
+    border-radius: 10px; /* Esquinas redondeadas */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra */
+  }
+  
+  h2 {
+    color: #fff; /* Título blanco */
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Estilos de formulario */
+  form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .form-label {
+    color: #fff; /* Etiquetas blancas */
+    margin-bottom: 10px;
+  }
+  
+  .form-control {
+    background-color: #555; /* Fondo gris oscuro */
+    border: 1px solid #666; /* Borde gris claro */
+    border-radius: 5px; /* Esquinas redondeadas */
+    padding: 10px;
+    color: #fff; /* Texto blanco */
+  }
+  
+  .form-control:focus {
+    border-color: #aaa; /* Borde gris claro cuando se enfoca */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra cuando se enfoca */
+  }
+  
+  .valid-feedback {
+    color: #0f0; /* Texto verde cuando es válido */
+  }
+  
+  .invalid-feedback {
+    color: #f00; /* Texto rojo cuando es inválido */
+  }
+  
+  /* Estilos de botón */
+  .btn-primary {
+    background-color: #008000; /* Botón verde */
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .btn-primary:hover {
+    background-color: #00a000; /* Botón verde claro cuando se pasa el mouse */
+  }
+  
+  /* Estilos de diseño de pelea de robots */
+  .robot-background {
+    
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  
+  .robot-glow {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5); /* Sombra blanca */
+  }
+  
+  .robot-metal {
+    background-color: #666; /* Fondo gris claro */
+    border: 1px solid #aaa; /* Borde gris claro */
+    border-radius: 10px; /* Esquinas redondeadas */
+    padding: 10px;
+  }
+  
+  .robot-metal:hover {
+    background-color: #888; /* Fondo gris claro cuando se pasa el mouse */
+  }

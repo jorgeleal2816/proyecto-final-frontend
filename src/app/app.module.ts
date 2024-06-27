@@ -15,7 +15,7 @@ import { Page404Component } from './public/pages/page-404/page-404.component';
 import { provideHttpClient, withFetch } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { NewProductComponent } from './private/pages/products/new-product/new-product.component';
-
+import { UpdateProductComponent } from './private/pages/products/update-product/update-product.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +29,8 @@ import { NewProductComponent } from './private/pages/products/new-product/new-pr
     FooterComponent,
     AsideComponent,
     Page404Component,
-    NewProductComponent
+    NewProductComponent,
+    UpdateProductComponent
   ],
   imports: [
     BrowserModule,

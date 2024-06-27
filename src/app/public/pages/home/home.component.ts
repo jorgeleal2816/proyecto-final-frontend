@@ -7,22 +7,19 @@ import { ProductsService } from '../../../private/services/products.service';
   styleUrl: './home.component.css'
 })
 export class HomeComponent implements OnInit {
-  /** Atributos o propiedades (estas son las que se hacen publicas a nuestro HTML) */
-  // products (nombre de nuestro atributo) : Tipo (any) = Lista vacia
-  products: any[] = [];
+  products:any
 
-  /** Inyectar una dependencia (hacerla disponible) usando el constructor de la clase del componente */
-  constructor( private productservice: ProductsService ) {}
+  constructor(private productsService: ProductsService ) { }
 
+  ngOnInit(){
+    this.loadData()
+  }
 
-  ngOnInit() {
-    /** Ejecuta el servicio disponible para obtener los datos */
-    
-    }
-  
-
-  ngOnDestroy() {
-
+  loadData() {
+    this.productsService.getProduct().subscribe(data=> {
+      console.log(data)
+      this.products = data.data
+    })
   }
   
 }
