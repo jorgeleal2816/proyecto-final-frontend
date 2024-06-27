@@ -1,0 +1,44 @@
+<div class="container">
+    <h2>Registrar producto</h2>
+    <form class="row g-3 needs-validation" novalidate [formGroup]="newProduct">
+        <div class="col-md-4">
+          <label for="validationCustom01" class="form-label">Nombre</label>
+          <input type="text" class="form-control" id="validationCustom01" formControlName="name" required>
+          <div class="valid-feedback">
+            Looks good!
+          </div>
+        </div>
+        <div class="col-md-4">
+          <label for="validationCustom01" class="form-label">urlimagen</label>
+          <input type="text" class="form-control" id="validationCustom01" formControlName="urlimagen" required>
+          <div class="valid-feedback">
+            Looks good!
+          </div>
+        </div>
+        <div class="col-md-4">
+          <label for="validationCustom01" class="form-label">cantidad</label>
+          <input type="text" class="form-control" id="validationCustom01" formControlName="quantity" required>
+          <div class="valid-feedback">
+            Looks good!
+          </div>
+        </div>
+        <div class="col-md-4">
+          <label for="validationCustom02" class="form-label">Descripción</label>
+          <input type="text" class="form-control" id="validationCustom02" formControlName="description" required>
+          <div class="valid-feedback">
+            Looks good!
+          </div>
+        </div>
+        <div class="col-md-3">
+          <label for="validationCustom05" class="form-label">Precio</label>
+          <input type="text" class="form-control" id="validationCustom05" formControlName="price" required>
+          <div class="invalid-feedback">
+            
+          </div>
+        </div>
+        
+        <div class="col-12">
+          <button class="btn btn-primary" type="submit" (click)="onSumbit()">Guardar</button>
+        </div>
+      </form> 
+</div>

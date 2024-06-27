@@ -5,12 +5,16 @@ import { LoginComponent } from './public/pages/login/login.component';
 import { RegisterComponent } from './public/pages/register/register.component';
 import { DashboardComponent } from './private/pages/dashboard/dashboard.component';
 import { Page404Component } from './public/pages/page-404/page-404.component';
+import { NewProductComponent } from './private/pages/products/new-product/new-product.component';
+import { UpdateProductComponent } from './private/pages/products/update-product/update-product.component';
 import { NeweventsComponent } from './private/pages/eventos/newevents/newevents.component';
 import { EventosComponent } from './private/pages/eventos/eventos.component';
 import { ActualizareventoComponent } from './private/pages/actualizarevento/actualizarevento.component';
 import { LocalidadesComponent } from './private/pages/localidades/localidades.component';
 import { NuevaLocalidadComponent } from './private/pages/localidades/nueva-localidad/nueva-localidad.component';
 import { ActualizarLocalidadComponent } from './private/pages/localidades/actualizar-localidad/actualizar-localidad.component';
+import { ProductsComponent } from './private/pages/products/products.component';
+
 
 const routes: Routes = [
   { path: '', component: HomeComponent },                         // http://localhost:4200/
@@ -24,6 +28,9 @@ const routes: Routes = [
   { path: 'dashboard/nueva-localidad', component: NuevaLocalidadComponent },
  { path: 'dashboard/actualizar-localidad/:id', component: ActualizarLocalidadComponent },
   { path: '404', component: Page404Component },                   // http://localhost:4200/404
+  { path: 'dashboard/products', component: ProductsComponent },   // http://localhost:4200/dashboard/products
+  { path: 'dashboard/new-product', component: NewProductComponent },  // http://localhost:4200/dashboard/new-product
+  { path: 'dashboard/products/edit/:id', component: UpdateProductComponent },  // http://localhost:4200/dashboard/new-product
   { path: '**', redirectTo: '404' },
 ];
 

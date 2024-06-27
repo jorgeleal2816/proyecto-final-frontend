@@ -1,13 +1,14 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import {ActivatedRoute} from '@angular/router';
-// import { ProductsService } from '../../../services/products.service';
+import { ProductsService } from '../../../services/products.service';
+
 
 
 @Component({
   selector: 'app-update-product',
-  template: '<h1> </h1>',
-  styles: [ '' ]
+  templateUrl: './update-product.component.html',
+  styleUrl: './update-product.component.css'
 })
 export class UpdateProductComponent {
 
@@ -15,7 +16,7 @@ export class UpdateProductComponent {
   id: any
 
   constructor(
-    // private productService: ProductsService,
+    private productService: ProductsService,
     private activatedRoute: ActivatedRoute
   ) {
     this.product = new FormGroup({
@@ -31,19 +32,20 @@ export class UpdateProductComponent {
     this.activatedRoute.params.subscribe( ( data:any ) => {
       this.id = data.id;
 
-      // this.productService.getProductById(this.id).subscribe( ( data: any) => {
-      //   console.log( data );
+      this.productService.getProductById(this.id).subscribe( ( data: any) => {
+        console.log( data );
 
-      //   const productoEncontrado = data.data;
+        const productoEncontrado = data.data;
 
-      //   this.product.setValue({
-      //     name: productoEncontrado.name,
-      //     description: productoEncontrado.description,
-      //     price: productoEncontrado.price,
-      //     urlimagen: productoEncontrado.urlimagen,
-      //     quantity: productoEncontrado.quantity
-      //   });
-      // });
+        this.product.setValue({
+          name: productoEncontrado.name,
+          description: productoEncontrado.description,
+          price: productoEncontrado.price,
+          urlimagen: productoEncontrado.urlimagen,
+          quantity: productoEncontrado.quantity
+        });
+      });
+
     });
   }
 
