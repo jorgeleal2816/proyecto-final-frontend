@@ -15,8 +15,8 @@
         <td>{{ localidad.nombre }}</td>
         <td>{{localidad.urlImagen}}</td>
         <td>
-          <a class="btn btn-primary"  [routerLink]="[ '/dashboard/actualizar-localidad', localidad._id ]">editar</a>
-          <a class="btn btn-outline-primary" [routerLink]="[ '' ]">eliminar</a>
+          <a class="btn btn-primary"  routerLink="/dashboard/actualizar-localidad/{{localidad._id}}">editar</a>
+          <a (click)="onDelete(localidad._id)" class="btn btn-danger">Eliminar</a>
         </td>
       </tr>
      

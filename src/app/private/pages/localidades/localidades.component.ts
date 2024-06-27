@@ -11,11 +11,22 @@ export class LocalidadesComponent {
   constructor(private lservice: LocalidadesService) {}
 
   ngOnInit(){
-    this.lservice.getProducts().subscribe(datos => {
-      console.log (datos)
+    this.loadData()
+
+  }
+
+  loadData() {
+    this.lservice.getlocalidades().subscribe(datos => {
+      console.log ('::::::::',datos)
       this.localidades= datos.data
     })
   }
   
 
+onDelete(id: any) {
+  this.lservice.DeletelocalidadById(id).subscribe( data => {
+    console.log(data);
+    this.loadData();
+  })
+}
 }

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
-import { nuevalocalidadService } from '../../../services/nuevalocalidades.service';
+import { LocalidadesService } from '../../../services/localidades.service';
 
 @Component({
   selector: 'app-nueva-localidad',
@@ -12,7 +12,7 @@ export class NuevaLocalidadComponent {
   nuevalocalidad:any
 
 
-  constructor(private NuevalocalidadService: nuevalocalidadService ){
+  constructor(private NuevalocalidadService: LocalidadesService ){
       this.nuevalocalidad = new FormGroup({
         nombre: new FormControl( '', [] ),
         urlImagen: new FormControl( '', [] ),

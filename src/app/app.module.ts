@@ -19,6 +19,7 @@ import { NuevaLocalidadComponent } from './private/pages/localidades/nueva-local
 import { ActualizarLocalidadComponent } from './private/pages/localidades/actualizar-localidad/actualizar-localidad.component';
 import { ReactiveFormsModule } from '@angular/forms';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +35,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     LocalidadesComponent,
     BuscarComponent,
     NuevaLocalidadComponent,
-    ActualizarLocalidadComponent
+    ActualizarLocalidadComponent,
+   
   ],
   imports: [
     BrowserModule,
