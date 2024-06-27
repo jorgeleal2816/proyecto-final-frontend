@@ -7,6 +7,8 @@ import { ProductsService } from '../../../private/services/products.service';
   styleUrl: './home.component.css'
 })
 export class HomeComponent implements OnInit {
+
+  localidades: any[] = [];
   products:any
 
   constructor(private productsService: ProductsService ) { }
@@ -20,6 +22,7 @@ export class HomeComponent implements OnInit {
       console.log(data)
       this.products = data.data
     })
+
   }
   
 }

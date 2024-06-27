@@ -1,0 +1,26 @@
+<div class="container">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">id</th>
+        <th scope="col">nonbre localidad</th>
+        <th scope="col">urlImagen</th>
+        <th scope="col">acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr
+      *ngFor="let localidad of localidades">
+        <th scope="row">{{localidad._id}}</th>
+        <td>{{ localidad.nombre }}</td>
+        <td>{{localidad.urlImagen}}</td>
+        <td>
+          <a class="btn btn-primary"  routerLink="/dashboard/actualizar-localidad/{{localidad._id}}">editar</a>
+          <a (click)="onDelete(localidad._id)" class="btn btn-danger">Eliminar</a>
+        </td>
+      </tr>
+     
+    </tbody>
+  </table>
+</div>
+

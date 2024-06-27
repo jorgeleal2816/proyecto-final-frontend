@@ -1,17 +1,17 @@
-<!-- <p>{{ products | json  }}</p> -->
 
-<div class="products">
+<div class="product">
   <ul>
-    <li *ngFor="let product of products">
+    <li *ngFor="let product of products ">
       <div class="card" style="width: 18rem;">
-        <img [src]="product.urlimagen" class="card-img-top" [alt]="product.name">
+        <img [src]="product.urlimagen" class="card-img-top" [alt]="products.name">
+
         <div class="card-body">
           <h5 class="card-title">{{ product.name }}</h5>
-          <p class="card-text">{{ product.category }}</p>
+
           <a href="#" class="btn btn-primary">Go somewhere</a>
         </div>
       </div>
-    </li>
+      </li>
   </ul>
 
 </div>
