@@ -18,6 +18,7 @@ export class NeweventsComponent {
         price: new FormControl( 0, [] ),
         initialDate: new FormControl( '', [] ), 
         finalDate: new FormControl( '', [] ), 
+        imageUrl: new FormControl( '', [] ),
       })
     }
 

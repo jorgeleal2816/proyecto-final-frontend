@@ -14,8 +14,12 @@ export class ActualizareventoComponent {
   id: any
 
   actualizareventosForm: FormGroup = this.formBuilder.group({
-    name: [ '', [ Validators.required] ],
-    description: [ '', [] ],
+        name: [ '', [] ],
+        description: [ '', [] ],
+        price: [ 0, [] ],
+        initialDate: [ '', [] ], 
+        finalDate: [ '', [] ], 
+        imageUrl: [ '', [] ],
 
   });
   

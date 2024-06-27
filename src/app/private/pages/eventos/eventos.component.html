@@ -1,29 +1,21 @@
-<div class="container">
-  <table class="table">
-    <thead>
-      <tr>
-        <th scope="col">nonbre del evento</th>
-        <th scope="col">description</th>
-        <th scope="col">precio</th>
-        <th scope="col">inicio</th>
-        <th scope="col">fin</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr
-      *ngFor="let evento of eventos">
-        <td>{{ evento.name }}</td>
-        <td>{{evento.description}}</td>
-        <td>{{evento.price}}</td>
-        <td>{{evento.initialDate}}</td>
-        <td>{{evento.finalDate}}</td>
-        <td>
-          <a class="btn btn-primary"  routerLink="/dashboard/actualizar-eventos/{{evento._id}}">editar</a>
-          <a (click)="onDelete(evento._id)" class="btn btn-danger">Eliminar</a>
-        </td>
-      </tr>
-
-    </tbody>
-  </table>
+<div class="container" style="background-color: #fcf4f4; padding: 0px; margin: 0px, 0px, 0px, 0px;">
+  <div class="event-list">
+    <div *ngFor="let evento of eventos" class="event-card">
+      <div class="event-image" style="background-color: #fadbdb;">
+        <img [src]="evento.imageUrl" alt="Imagen del evento" *ngIf="evento.imageUrl">
+      </div>
+      <div class="event-info" style="background-color: #f5cdcd; padding: 20px; color: #fff;">
+        <h2 style="color: #fff;">{{ evento.name }}</h2>
+        <p style="color: #fff;">{{ evento.description }}</p>
+        <p style="color: #fff;"><strong>Precio:</strong> {{ evento.price }}</p>
+        <p style="color: #fff;"><strong>Fecha de inicio:</strong> {{ evento.initialDate }}</p>
+        <p style="color: #fff;"><strong>Fecha de fin:</strong> {{ evento.finalDate }}</p>
+      </div>
+      <div class="event-actions" style="background-color: #f3c5c5; padding: 20px; text-align: right;">
+        <a class="btn btn-primary" routerLink="/dashboard/actualizar-eventos/{{evento._id}}">Editar</a>
+        <a (click)="onDelete(evento._id)" class="btn btn-danger">Eliminar</a>
+      </div>
+    </div>
+  </div>
 </div>
   
