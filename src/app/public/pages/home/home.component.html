@@ -1,16 +1,13 @@
 
-<div class="eventos">
+<div class="localidades">
   <ul>
-    <li *ngFor="let eventos of eventos">
+    <li *ngFor="let localidad of localidades">
       <div class="card" style="width: 18rem;">
-        <img [src]="eventos.urlImage" class="card-img-top" [alt]="eventos.name">
+        <img [src]="localidad.urlImage" class="card-img-top" [alt]="localidad.name">
         <div class="card-body">
-          <h5 class="card-title">{{ eventos.name }}</h5>
-          <p class="card-text">{{ eventos.Descripcion }}</p>
-          <p class="card-number">Precio:  {{ eventos.price | currency}}</p>
-          <p class="card-date">Fecha inicial:  {{ eventos.fecha_inicial }}</p>
-          <p class="card-date">Fecha final:  {{ eventos.fecha_final }}</p>
-          <a href="#" class="btn btn-primary">Inscribirse</a>
+          <h5 class="card-title">{{ localidad.name }}</h5>
+
+          <a href="#" class="btn btn-primary">Go somewhere</a>
         </div>
       </div>
     </li>

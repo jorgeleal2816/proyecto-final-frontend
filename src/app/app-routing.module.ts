@@ -8,6 +8,9 @@ import { Page404Component } from './public/pages/page-404/page-404.component';
 import { NeweventsComponent } from './private/pages/eventos/newevents/newevents.component';
 import { EventosComponent } from './private/pages/eventos/eventos.component';
 import { ActualizareventoComponent } from './private/pages/actualizarevento/actualizarevento.component';
+import { LocalidadesComponent } from './private/pages/localidades/localidades.component';
+import { NuevaLocalidadComponent } from './private/pages/localidades/nueva-localidad/nueva-localidad.component';
+import { ActualizarLocalidadComponent } from './private/pages/localidades/actualizar-localidad/actualizar-localidad.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },                         // http://localhost:4200/
@@ -17,6 +20,9 @@ const routes: Routes = [
   { path: 'dashboard/neweventos', component: NeweventsComponent },   // http://localhost:4200/dashboard/eventos
   { path: 'dashboard/eventos', component: EventosComponent },
   { path: 'dashboard/actualizar-eventos/:id', component: ActualizareventoComponent },
+  { path: 'dashboard/localidades', component: LocalidadesComponent },
+  { path: 'dashboard/nueva-localidad', component: NuevaLocalidadComponent },
+ { path: 'dashboard/actualizar-localidad/:id', component: ActualizarLocalidadComponent },
   { path: '404', component: Page404Component },                   // http://localhost:4200/404
   { path: '**', redirectTo: '404' },
 ];

@@ -13,9 +13,14 @@ import { AsideComponent } from './components/layout/aside/aside.component';
 import { Page404Component } from './public/pages/page-404/page-404.component';
 import { EventosComponent } from './private/pages/eventos/eventos.component';
 import { NeweventsComponent } from './private/pages/eventos/newevents/newevents.component';
-import { provideHttpClient } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ActualizareventoComponent } from './private/pages/actualizarevento/actualizarevento.component';
+import { LocalidadesComponent } from './private/pages/localidades/localidades.component';
+import { BuscarComponent } from './public/pages/buscar/buscar.component';
+import { provideHttpClient } from '@angular/common/http';
+import { NuevaLocalidadComponent } from './private/pages/localidades/nueva-localidad/nueva-localidad.component';
+import { ActualizarLocalidadComponent } from './private/pages/localidades/actualizar-localidad/actualizar-localidad.component';
+
 
 @NgModule({
   declarations: [
@@ -30,7 +35,12 @@ import { ActualizareventoComponent } from './private/pages/actualizarevento/actu
     Page404Component,
     EventosComponent,
     NeweventsComponent,
-    ActualizareventoComponent
+    ActualizareventoComponent,
+    LocalidadesComponent,
+    BuscarComponent,
+    NuevaLocalidadComponent,
+    ActualizarLocalidadComponent,
+   
   ],
   imports: [
     BrowserModule,
