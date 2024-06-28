@@ -34,8 +34,32 @@ export class ActualizareventoComponent {
   ngOnInit() {
     this.activatedRoute.params.subscribe( ( data:any) => {
       this.id = data.id;
-    })
-  }
+
+      console.log('ID ', this.id)
+      this.actualizareventosService.getEventosById(this.id).subscribe( ( data: any) => {
+        console.log( data );
+
+        const eventoEncontrado = data.data;
+
+        const fi = new Date( eventoEncontrado.initialDate ).toISOString().split('T')[0]
+        const ff = new Date( eventoEncontrado.finalDate ).toISOString().split('T')[0]
+
+        console.log( fi, ff )
+
+        this.actualizareventosForm.setValue({
+        name: eventoEncontrado.name,
+        description: eventoEncontrado.description,
+        price: eventoEncontrado.price,
+        initialDate: fi, 
+        finalDate: ff, 
+        imageUrl: eventoEncontrado.imageUrl,
+        });
+
+      });
+
+      });
+
+    }
 
   onSumbit() {
     if( this.actualizareventosForm.valid ) {
@@ -48,3 +72,4 @@ export class ActualizareventoComponent {
     }
   }
 }
+

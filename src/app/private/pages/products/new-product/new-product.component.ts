@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 import { ProductsService } from '../../../services/products.service';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-new-product',
@@ -13,7 +14,9 @@ export class NewProductComponent {
 
   constructor(
     private formBuilder: FormBuilder,
-    private productService: ProductsService){
+    private productService: ProductsService,
+    private activatedRoute: ActivatedRoute,
+    private router: Router){
       
       this.newProduct = this.formBuilder.group({
         name: ['', [Validators.required]],
@@ -34,6 +37,8 @@ export class NewProductComponent {
       console.log( this.newProduct.value );
       this.productService.createProduct(this.newProduct.value).subscribe((data) => {
         console.log(data)
+
+        this.router.navigateByUrl('dashboard/products');
       })
 
     }

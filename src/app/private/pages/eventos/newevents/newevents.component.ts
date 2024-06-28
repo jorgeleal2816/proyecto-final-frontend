@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 import { EventosService } from '../../../services/eventos.service';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-newevents',
@@ -11,7 +12,11 @@ export class NeweventsComponent {
 
   neweventos:any
 
-  constructor(private neweventosServices: EventosService ){
+  constructor(
+    private neweventosServices: EventosService,
+    private activatedRoute: ActivatedRoute,
+    private router: Router )
+    {
       this.neweventos = new FormGroup({
         name: new FormControl( '', [] ),
         description: new FormControl( '', [] ),
@@ -32,6 +37,8 @@ export class NeweventsComponent {
       console.log( this.neweventos.value );
       this.neweventosServices.postNeweventos(this.neweventos.value).subscribe(data=>{
         console.log(data)
+
+        this.router.navigateByUrl('dashboard/eventos');
       })
 
     }

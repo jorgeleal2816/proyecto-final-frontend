@@ -9,19 +9,23 @@ export class EventosService {
   constructor(private httpclient:HttpClient) { }
 
   getEventos() {
-    return this.httpclient.get<any>("http://localhost:3000/api/eventos")
+    return this.httpclient.get<any>("http://localhost:3007/api/eventos")
+  }
+
+  getEventosById( id: any) {
+    return this.httpclient.get<any>(`http://localhost:3007/api/eventos/${id}`)
   }
 
   postNeweventos(evento:any) {
-    return this.httpclient.post<any>("http://localhost:3000/api/eventos", evento)
+    return this.httpclient.post<any>("http://localhost:3007/api/eventos", evento)
   }
 
   patcheventos(id: string, evento: any) {
-    return this.httpclient.patch<any>(`http://localhost:3000/api/eventos/${id}`, evento)
+    return this.httpclient.patch<any>(`http://localhost:3007/api/eventos/${id}`, evento)
   }
 
   deleteeventos(id: any ) {
-    return this.httpclient.delete<any>(`http://localhost:3000/api/eventos/${id}`)
+    return this.httpclient.delete<any>(`http://localhost:3007/api/eventos/${id}`)
   }
   
 }

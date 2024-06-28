@@ -8,8 +8,8 @@
         <h2 style="color: #fff;">{{ evento.name }}</h2>
         <p style="color: #fff;">{{ evento.description }}</p>
         <p style="color: #fff;"><strong>Precio:</strong> {{ evento.price }}</p>
-        <p style="color: #fff;"><strong>Fecha de inicio:</strong> {{ evento.initialDate }}</p>
-        <p style="color: #fff;"><strong>Fecha de fin:</strong> {{ evento.finalDate }}</p>
+        <p style="color: #fff;"><strong>Fecha de inicio:</strong> {{ evento.initialDate | date }}</p>
+        <p style="color: #fff;"><strong>Fecha de fin:</strong> {{ evento.finalDate | date }}</p>
       </div>
       <div class="event-actions" style="background-color: #f3c5c5; padding: 20px; text-align: right;">
         <a class="btn btn-primary" routerLink="/dashboard/actualizar-eventos/{{evento._id}}">Editar</a>
