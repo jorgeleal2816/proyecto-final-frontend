@@ -1,3 +1,4 @@
+
 ul.products-list {
     display: flex;
     flex-wrap: wrap;
@@ -7,7 +8,7 @@ ul.products-list {
 }
 
 li.product-item {
-    width: 320px;
+    width: 290px;
     height: 24rem;
     max-height: 100%;
     box-shadow: 2px 3px 28px #263238;
@@ -31,3 +32,4 @@ li.product-item {
         width: 22%;
     }
 } */
+

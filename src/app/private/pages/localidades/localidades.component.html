@@ -3,7 +3,7 @@
     <thead>
       <tr>
         <th scope="col">id</th>
-        <th scope="col">nonbre localidad</th>
+        <th scope="col">Nombre localidad</th>
         <th scope="col">urlImagen</th>
         <th scope="col">acciones</th>
       </tr>
@@ -24,3 +24,21 @@
   </table>
 </div>
 
+
+<div class="localidad">
+  <h1 class="title">Localidades</h1>
+  <ul class="products-list">
+    <li *ngFor="let localidad of localidades " class="product-item">
+      <div class="card ">
+        <img [src]="localidad.urlImagen" class="card-img-top" [alt]="localidades.name">
+
+        <div class="card-body">
+          <h5 class="card-title">{{ localidad.name }}</h5>
+
+          <a href="#" class="btn btn-primary">Inscribirse</a>
+        </div>
+      </div>
+      </li>
+  </ul>
+
+</div>

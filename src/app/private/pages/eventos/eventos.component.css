@@ -7,9 +7,9 @@
 .event-card {
   margin: 20px;
   padding: 20px;
-  border: 1px solid #f5f0f0;
+  border: 1px solid #030000;
   border-radius: 10px;
-  box-shadow: 0 0 10px #faf7f7;
+  box-shadow: 0 0 10px #f10909;
   width: 300px;
 }
 
@@ -42,4 +42,10 @@
 
 .event-actions a {
   margin-left: 10px;
+}
+
+element.style {
+  background-color: #e21919;
+  padding: 20px;
+  color: #fff;
 }
