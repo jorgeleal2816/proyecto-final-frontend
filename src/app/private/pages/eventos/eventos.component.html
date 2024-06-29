@@ -12,8 +12,8 @@
         <p style="color: #fff;"><strong>Fecha de fin:</strong> {{ evento.finalDate | date }}</p>
       </div>
       <div class="event-actions" style="background-color: #ec0606; padding: 20px; text-align: right;">
-        <a class="btn btn-primary" routerLink="/dashboard/actualizar-eventos/{{evento._id}}">Editar</a>
-        <a (click)="onDelete(evento._id)" class="btn btn-danger">Eliminar</a>
+        <a class="btn btn-primary" style="background-color: #020101;"  routerLink="/dashboard/actualizar-eventos/{{evento._id}}">Editar</a>
+        <a (click)="onDelete(evento._id)" style="background-color: #020101;" class="btn btn-danger">Eliminar</a>
       </div>
     </div>
   </div>

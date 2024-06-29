@@ -1,4 +1,4 @@
-<div class="container">
+<!-- <div class="container">
   <table class="table">
     <thead>
       <tr>
@@ -41,4 +41,23 @@
       </li>
   </ul>
 
+</div> -->
+
+<div class="container" style="background-color: #020101; padding: 0px; margin: 0px, 0px, 0px, 0px;">
+  <div class="event-list">
+    <div *ngFor="let evento of localidades" class="event-card">
+      <div class="event-image" style="background-color: #090101;">
+        <img [src]="evento.urlImagen" alt="Imagen del evento" *ngIf="evento.urlImagen">
+      </div>
+      <div class="event-info" style="background-color: #ef0a0a; padding: 20px; color: #fff;">
+        <h2 style="color: #fff;">{{ evento.nombre }}</h2>
+        <p style="color: #fff;">{{ evento.descripcion }}</p>
+        
+      </div>
+      <div class="event-actions" style="background-color: #ec0606; padding: 20px; text-align: right;">
+        <a class="btn btn-primary" routerLink="/dashboard/actualizar-eventos/{{evento._id}}">Editar</a>
+        <a (click)="onDelete(evento._id)" class="btn btn-danger">Eliminar</a>
+      </div>
+    </div>
+  </div>
 </div>
