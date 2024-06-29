@@ -109,3 +109,7 @@ body {
     border: var(--bs-border-width) solid #7b09c9;
 }
 
+.btn-outline-success {
+--bs-btn-color: #fff;
+    --bs-btn-border-color: #000;
+}
