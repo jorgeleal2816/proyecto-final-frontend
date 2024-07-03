@@ -112,4 +112,13 @@ body {
 .btn-outline-success {
 --bs-btn-color: #fff;
     --bs-btn-border-color: #000;
+    
+    
 }
+
+element.style {
+  background-color: #099bd0;
+  padding: 20px;
+  color: #fff;
+}
+

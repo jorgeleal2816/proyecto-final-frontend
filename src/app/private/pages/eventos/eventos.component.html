@@ -4,14 +4,14 @@
       <div class="event-image" style="background-color: #090101;">
         <img [src]="evento.imageUrl" alt="Imagen del evento" *ngIf="evento.imageUrl">
       </div>
-      <div class="event-info" style="background-color: #ef0a0a; padding: 20px; color: #fff;">
+      <div class="event-info" style="background-color: #a04afc; padding: 20px; color: #fff;">
         <h2 style="color: #fff;">{{ evento.name }}</h2>
         <p style="color: #fff;">{{ evento.description }}</p>
         <p style="color: #fff;"><strong>Precio:</strong> {{ evento.price }}</p>
         <p style="color: #fff;"><strong>Fecha de inicio:</strong> {{ evento.initialDate | date }}</p>
         <p style="color: #fff;"><strong>Fecha de fin:</strong> {{ evento.finalDate | date }}</p>
       </div>
-      <div class="event-actions" style="background-color: #ec0606; padding: 20px; text-align: right;">
+      <div class="event-actions" style="background-color: #a04afc; padding: 20px; text-align: right;">
         <a class="btn btn-primary" style="background-color: #020101;"  routerLink="/dashboard/actualizar-eventos/{{evento._id}}">Editar</a>
         <a (click)="onDelete(evento._id)" style="background-color: #020101;" class="btn btn-danger">Eliminar</a>
       </div>
