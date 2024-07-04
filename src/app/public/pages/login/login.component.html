@@ -1,13 +1,16 @@
 <div class="container">
-    <div class="form-floating mb-3">
-        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+    <div class="form-floating mb-3"
+    [formGroup]="login"
+    >
+        <input type="email" class="form-control" id="floatingInput" formControlName="mail" placeholder="name@example.com">
         <label for="floatingInput">Email address</label>
-      </div>
+      
       <div class="form-floating">
-        <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+        <input type="password" class="form-control" id="floatingPassword" formControlName="password" placeholder="Password">
         <label for="floatingPassword">Password</label>
       </div>
       <div class="col-12">
-        <button type="submit" class="btn btn-primary">entrar</button>
+        <button type="submit" class="btn btn-primary" (click)="onSumbit()">entrar</button>
       </div>
+    </div>
 </div>

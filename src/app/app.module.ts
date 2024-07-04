@@ -7,7 +7,6 @@ import { HomeComponent } from './public/pages/home/home.component';
 import { LoginComponent } from './public/pages/login/login.component';
 import { RegisterComponent } from './public/pages/register/register.component';
 import { DashboardComponent } from './private/pages/dashboard/dashboard.component';
-import { ProductsComponent } from './private/pages/products/products.component';
 import { HeaderComponent } from './components/layout/header/header.component';
 import { FooterComponent } from './components/layout/footer/footer.component';
 import { AsideComponent } from './components/layout/aside/aside.component';
@@ -27,7 +26,6 @@ import { ReactiveFormsModule } from '@angular/forms';
     LoginComponent,
     RegisterComponent,
     DashboardComponent,
-    ProductsComponent,
     HeaderComponent,
     FooterComponent,
     AsideComponent,
