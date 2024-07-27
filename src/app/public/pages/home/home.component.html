@@ -1,18 +1,18 @@
 
 
-<div class="container" style="background-color: #020101; padding: 0px; margin: 0px, 0px, 0px, 0px;">
+<div class="container" style="background-color: #b2aef8; padding: 0px; margin: 0px, 0px, 0px, 0px;">>
   <div class="event-list">
     <div *ngFor="let evento of products" class="event-card">
       <div class="event-image" style="background-color: #090101;">
         <img [src]="evento.urlimagen" alt="Imagen del evento" *ngIf="evento.urlimagen">
       </div>
-      <div class="event-info" style="background-color: #a04afc; padding: 20px; color: #fff;">
+      <div class="event-info" style="background-color: hsl(240, 87%, 66%); padding: 20px; color: #fff;">
         <h2 style="color: #fff;">{{ evento.name }}</h2>
         <p style="color: #fff;">{{ evento.quantity }}</p>
         <p style="color: #fff;"><strong>Precio:</strong> {{ evento.price | currency }}</p>
         
       </div>
-      <div class="event-actions" style="background-color: #a04afc; padding: 20px; text-align: right;">
+      <div class="event-actions" style="background-color:hsl(240, 87%, 66%); padding: 20px; text-align: right;">
         <a href="#" class="btn btn-primary" style="background-color: #020101;">Agregar a carrito</a>
         
       </div>
